@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
     
-
-
+    var timer: TimerBuilder?
+    
+    @IBAction func hardnessSelected(_ sender: UIButton) {
+        
+        timer = TimerBuilder(hardness: sender.currentTitle!)
+        if let time = timer?.time {
+            print(time)
+        }
+     
+    }
 }
