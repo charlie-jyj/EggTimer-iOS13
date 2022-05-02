@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
     private var eggTimer: EggTimer?
     private var secondsPassed: Float = 0.0
     private var timerState: Bool = false
+    private var player: AVAudioPlayer?
     
     @IBOutlet var progressView: UIProgressView!
     @IBOutlet var titleLabel: UILabel!
@@ -70,6 +72,7 @@ extension ViewController {
             // 0초가 되었을 때
             currentTimer.invalidate()
             changeTimerStatus()
+            playSound()
             titleLabel.text = "the egg is ready!"
             progressView.setProgress(1.0, animated: true)
             timeLabel.isHidden = true
@@ -78,5 +81,18 @@ extension ViewController {
     
     private func progressPercentages (_ secondsPassed: Float, _ totalSeconds: Float) -> Float {
         return secondsPassed/totalSeconds
+    }
+    
+    private func playSound() {
+        guard let url = Bundle.main.url(forResource: "alarm_sound", withExtension: "mp3") else { return }
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback)
+            try AVAudioSession.sharedInstance().setActive(true, options: AVAudioSession.SetActiveOptions.notifyOthersOnDeactivation)
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+            guard let player = player else { return }
+            player.play()
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
 }
