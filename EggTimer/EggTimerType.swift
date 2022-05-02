@@ -15,7 +15,7 @@ enum TimerType: String, CaseIterable {
     
     var time: Float? {
         let timeTable: [TimerType: Float] = [
-            TimerType.Soft: 6.0,
+            TimerType.Soft: 0.1,
             TimerType.Medium: 9.0,
             TimerType.Hard: 12.0,
         ]
