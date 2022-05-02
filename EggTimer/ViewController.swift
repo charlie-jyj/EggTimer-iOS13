@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     private var isTimerStart: Bool = false
     private var eggTimer: EggTimer?
-    private var secondsRemaining: Int?
+    private var secondsRemaining: Float?
     
     @IBOutlet var progressView: UIProgressView!
     @IBOutlet var titleLabel: UILabel!
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         
         guard let time = eggTimer?.totalTime else { return }
         timeLabel.isHidden = false
-        timeLabel.text = String(time)
+        timeLabel.text = String(Int(time))
         progressView.setProgress(0.0, animated: true)
     }
     
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         self.isTimerStart = !isTimerStart
     }
     
-    func setSecondsRemaining(from seconds: Int) {
+    func setSecondsRemaining(from seconds: Float) {
         self.secondsRemaining = seconds
     }
     
@@ -60,7 +60,7 @@ extension ViewController {
     // tapped event 
     func timerFireMethod (currentTimer: Timer) -> Void {
         if let seconds = secondsRemaining, seconds > 0, let totalSeconds = eggTimer?.totalTime {
-            timeLabel.text = String(seconds)
+            timeLabel.text = String(Int(seconds))
             progressView.setProgress(progressPercentages(seconds, totalSeconds), animated: true)
             secondsRemaining = seconds - 1 // 1초 감소
            
@@ -74,7 +74,7 @@ extension ViewController {
         }
     }
     
-    private func progressPercentages (_ seconds: Int, _ totalSeconds: Int) -> Float {
-        return Float(Double(totalSeconds-seconds)/Double(totalSeconds))
+    private func progressPercentages (_ seconds: Float, _ totalSeconds: Float) -> Float {
+        return (totalSeconds-seconds)/totalSeconds
     }
 }

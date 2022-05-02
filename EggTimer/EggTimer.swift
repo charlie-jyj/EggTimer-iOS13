@@ -12,7 +12,7 @@ protocol EggTimerProtocol {
     var delegate: EggTimerBuilder? { get set }
     var timer: Timer? { get set }
     var timerType: TimerType? { get set }
-    var totalTime: Int? { get set }
+    var totalTime: Float? { get set }
     func startTimer()
     func endTimer()
 }
@@ -21,7 +21,7 @@ struct EggTimer: EggTimerProtocol {
     var delegate: EggTimerBuilder?
     var timer: Timer?
     var timerType: TimerType?
-    var totalTime: Int?
+    var totalTime: Float?
     
     public func startTimer() {
         changeTimerStatus() // False -> True

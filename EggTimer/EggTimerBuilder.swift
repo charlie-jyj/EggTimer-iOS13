@@ -40,7 +40,7 @@ class EggTimerBuilder {
             var eggTimer = EggTimer(
                 timer: Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: block),
                 timerType: selectedTimer,
-                totalTime: Int(time*60))
+                totalTime: time*60.0)
             eggTimer.delegate = self
             return eggTimer
         }

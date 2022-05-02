@@ -13,11 +13,11 @@ enum TimerType: String, CaseIterable {
     case Medium
     case Hard
     
-    var time: Int? {
-        let timeTable: [TimerType: Int] = [
-            TimerType.Soft: 6,
-            TimerType.Medium: 9,
-            TimerType.Hard: 12,
+    var time: Float? {
+        let timeTable: [TimerType: Float] = [
+            TimerType.Soft: 6.0,
+            TimerType.Medium: 9.0,
+            TimerType.Hard: 12.0,
         ]
         
         switch self {
