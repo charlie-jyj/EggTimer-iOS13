@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A1769B3280FC805004AF6C8 /* TimerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1769B2280FC805004AF6C8 /* TimerBuilder.swift */; };
-		6A1769B5280FD806004AF6C8 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1769B4280FD806004AF6C8 /* Timer.swift */; };
+		6A1769B3280FC805004AF6C8 /* EggTimerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1769B2280FC805004AF6C8 /* EggTimerBuilder.swift */; };
+		6A1769B5280FD806004AF6C8 /* EggTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1769B4280FD806004AF6C8 /* EggTimer.swift */; };
+		6A1769C428113F3B004AF6C8 /* EggTimerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1769C328113F3B004AF6C8 /* EggTimerType.swift */; };
 		AD5C106222D34E35001E14A5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD5C106122D34E35001E14A5 /* README.md */; };
 		AD5C106622D36212001E14A5 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AD5C106522D36212001E14A5 /* alarm_sound.mp3 */; };
 		ADF037EE22D332A800A69E9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF037ED22D332A800A69E9A /* AppDelegate.swift */; };
@@ -20,8 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6A1769B2280FC805004AF6C8 /* TimerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerBuilder.swift; sourceTree = "<group>"; };
-		6A1769B4280FD806004AF6C8 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		6A1769B2280FC805004AF6C8 /* EggTimerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggTimerBuilder.swift; sourceTree = "<group>"; };
+		6A1769B4280FD806004AF6C8 /* EggTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggTimer.swift; sourceTree = "<group>"; };
+		6A1769C328113F3B004AF6C8 /* EggTimerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EggTimerType.swift; sourceTree = "<group>"; };
 		AD5C106122D34E35001E14A5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AD5C106522D36212001E14A5 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 		ADF037EA22D332A800A69E9A /* EggTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,8 +70,9 @@
 				ADF037ED22D332A800A69E9A /* AppDelegate.swift */,
 				ADF037EF22D332A800A69E9A /* SceneDelegate.swift */,
 				ADF037F122D332A800A69E9A /* ViewController.swift */,
-				6A1769B2280FC805004AF6C8 /* TimerBuilder.swift */,
-				6A1769B4280FD806004AF6C8 /* Timer.swift */,
+				6A1769B2280FC805004AF6C8 /* EggTimerBuilder.swift */,
+				6A1769B4280FD806004AF6C8 /* EggTimer.swift */,
+				6A1769C328113F3B004AF6C8 /* EggTimerType.swift */,
 				ADF037F322D332A800A69E9A /* Main.storyboard */,
 				ADF037F622D332AD00A69E9A /* Assets.xcassets */,
 				AD5C106522D36212001E14A5 /* alarm_sound.mp3 */,
@@ -155,8 +158,9 @@
 				ADF037F222D332A800A69E9A /* ViewController.swift in Sources */,
 				ADF037EE22D332A800A69E9A /* AppDelegate.swift in Sources */,
 				ADF037F022D332A800A69E9A /* SceneDelegate.swift in Sources */,
-				6A1769B5280FD806004AF6C8 /* Timer.swift in Sources */,
-				6A1769B3280FC805004AF6C8 /* TimerBuilder.swift in Sources */,
+				6A1769C428113F3B004AF6C8 /* EggTimerType.swift in Sources */,
+				6A1769B5280FD806004AF6C8 /* EggTimer.swift in Sources */,
+				6A1769B3280FC805004AF6C8 /* EggTimerBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +307,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJA7283JV3;
 				INFOPLIST_FILE = EggTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -320,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XJA7283JV3;
 				INFOPLIST_FILE = EggTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
