@@ -61,9 +61,8 @@ extension ViewController {
     func timerFireMethod (currentTimer: Timer) -> Void {
         if let seconds = secondsRemaining, seconds > 0, let totalSeconds = eggTimer?.totalTime {
             timeLabel.text = String(seconds)
-            print((Double(totalSeconds)-Double(seconds))/Double(totalSeconds))
-            progressView.setProgress(Float((Double(totalSeconds)-Double(seconds))/Double(totalSeconds)), animated: true)
-            secondsRemaining = seconds-1 // 1초 감소
+            progressView.setProgress(progressPercentages(seconds, totalSeconds), animated: true)
+            secondsRemaining = seconds - 1 // 1초 감소
            
         } else {
             // 0초가 되었을 때
@@ -73,5 +72,9 @@ extension ViewController {
             progressView.setProgress(0.0, animated: true)
             timeLabel.isHidden = true
         }
+    }
+    
+    private func progressPercentages (_ seconds: Int, _ totalSeconds: Int) -> Float {
+        return Float(Double(totalSeconds-seconds)/Double(totalSeconds))
     }
 }
