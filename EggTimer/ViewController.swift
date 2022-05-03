@@ -28,7 +28,6 @@ class ViewController: UIViewController {
     
     @IBAction func hardnessSelected(_ sender: UIButton) {
 
-        // 기존의 타이머가 켜져있다면 끈다.
         if timerState{
             eggTimer?.endTimer()
         }
